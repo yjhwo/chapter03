@@ -1,3 +1,4 @@
+import java.util.Enumeration;
 import java.util.Vector;
 
 public class VectorTest01 {
@@ -10,10 +11,23 @@ public class VectorTest01 {
 		vector.addElement("마이콜");
 		
 		vector.removeElementAt(2);
+		
+		// 순회 1
 		for(int i=0; i<vector.size(); i++){
 			String s = vector.elementAt(i);
 			System.out.println(s);
 		}
+		
+		// 순회 2 - 옛날 방식
+		Enumeration<String> e = vector.elements();
+		while(e.hasMoreElements()){
+			String s = e.nextElement();
+			System.out.println(s);
+		}
+		
+		
+		
+		
 		
 		// ------------------
 		Vector v = new Vector();

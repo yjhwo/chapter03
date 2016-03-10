@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListTest {
@@ -12,9 +13,22 @@ public class ArrayListTest {
 		
 		list.remove(2);
 		
+		// 순회 1
 		int size = list.size();
 		for(int i=0; i<size; i++){
 			String s = list.get(i);
+			System.out.println(s);
+		}
+		
+		// 순회 2
+		Iterator<String> it = list.iterator();
+		while(it.hasNext()){
+			String s = it.next();
+			System.out.println(s);
+		}
+		
+		// 순회 3
+		for(String s : list){
 			System.out.println(s);
 		}
 		
