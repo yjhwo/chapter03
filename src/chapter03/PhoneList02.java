@@ -35,8 +35,6 @@ public class PhoneList02 {
 				
 			}
 			
-			
-			
 			sc.close();
 		} catch (Exception e) {
 			e.printStackTrace();
